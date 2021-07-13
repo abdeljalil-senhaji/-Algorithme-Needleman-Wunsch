@@ -1,31 +1,32 @@
-# -Algorithme-Needleman-Wunsch
+# -Algorithm-Needleman-Wunsch
 -----------------------------------------------------------------------------------------------------------------
 
-## Aperçu bibliographique
-L’algorithme Needleman – Wunsch est un algorithme utilisé en bioinformatique pour aligner des séquences protéiques ou nucléotidiques. Ce fut l'une des premières applications de la programmation dynamique pour comparer des séquences biologiques. L'algorithme a été développé par Saul B. Needleman et Christian D. Wunsch et publié en 1970. [1] L'algorithme divise essentiellement un grand problème (par exemple la séquence complète) en une série de problèmes plus petits, et il utilise les solutions aux plus petits problèmes pour trouver une solution optimale au problème plus vaste. [2] On l'appelle aussi parfois l’algorithme de correspondance optimal et letechnique d’alignement global. L'algorithme Needleman – Wunsch est encore largement utilisé pour un alignement global optimal, en particulier lorsque la qualité de l'alignement global est de la plus haute importance. L'algorithme attribue un score à chaque alignement possible, et le but de l'algorithme est de trouver tous les alignements possibles ayant le score le plus élevé.
+## Bibliographic overview
 
-## Principe :
+The Needleman - Wunsch algorithm is an algorithm used in bioinformatics to align protein or nucleotide sequences. It was one of the first applications of dynamic programming to compare biological sequences. The algorithm was developed by Saul B. Needleman and Christian D. Wunsch and published in 1970. [1] The algorithm essentially divides a large problem (eg the complete sequence) into a series of smaller problems, and it uses solutions to smaller problems to find an optimal solution to the larger problem. [2] It is also sometimes called the optimal matching algorithm and the global alignment technique. The Needleman - Wunsch algorithm is still widely used for optimal overall alignment, especially when the quality of the overall alignment is of the utmost importance. The algorithm assigns a score to each possible alignment, and the goal of the algorithm is to find all possible alignments with the highest score.
 
-Cet algorithme a été développé initialement pour aligner deux séquences protéiques. Soit A et B deux séquences de longueur m et n. L'algorithme construit un tableau à deux dimensions (m,n) que l'on appelle matrice de comparaison.
+## Principle :
 
-- Dans une première étape, on attribue à cette matrice les valeurs appropriées selon la matrice de scores élémentaires choisie. On obtient ainsi une matrice initiale de comparaison.
+This algorithm was originally developed to align two protein sequences. Let A and B be two sequences of length m and n. The algorithm constructs a two-dimensional array (m, n) called a comparison matrix.
 
-- Puis dans une deuxième étape, la matrice est transformée par addition de scores. Cette opération est effectuée ligne par ligne en commençant par le coin droit inférieur et en terminant par le coin gauche supérieur car il s'agit d'un alignement global.
+- In a first step, this matrix is ​​assigned the appropriate values ​​according to the elementary score matrix chosen. We thus obtain an initial comparison matrix.
 
-Le but est ensuite de trouver le meilleur alignement global, à partir de la matrice transformée. Pour cela, on établit dans la matrice un chemin qui correspond au passage des scores sommes les plus élevés, ceci en s'autorisant trois types de mouvements possibles et en prenant comme point de départ le score maximum présent dans la matrice transformée. Needleman et Wunsch nomment ce passage le chemin des scores maximum.
+- Then in a second step, the matrix is ​​transformed by adding scores. This is done line by line starting with the lower right corner and ending with the upper left corner as this is a global alignment.
 
-## Code en langage C :
+The goal is then to find the best overall alignment, from the transformed matrix. For this, a path is established in the matrix which corresponds to the passage of the highest sum scores, this by allowing three possible types of movements and taking as a starting point the maximum score present in the transformed matrix. Needleman and Wunsch call this passage the path of maximum scores.
 
-Résume les 3 étapes de l’algorithme :
+## Code langage C :
 
-•	Initialisation de la matrice
-•	Remplir de la matrice
-•	Affichage de la matrice
+Summarizes the 3 steps of the algorithm:
+
+• Matrix initialization
+• Fill in the matrix
+• Matrix display
 
 
-Programme crée un alignement global de deux séquences entrées par l’utilisateur.
+Program creates a global alignment of two user-entered sequences.
 
-En utilisant l'algorithme Needleman-Wunsch, sur une matrice à 2 dimensions, et une matrice des scores est renvoyée à l'utilisateur.
+Using the Needleman-Wunsch algorithm, on a 2-dimensional matrix, and a matrix of scores is returned to the user.
 
 ## Pour exécuter correctement ce programme : 
 
